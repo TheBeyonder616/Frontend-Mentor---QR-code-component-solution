@@ -1,0 +1,97 @@
+@import url(https://fonts.google.com/specimen/Outfit);
+
+/* ---------------------------Base------------------------ */
+:root {
+  --crl-white: hsl(0, 0%, 100%);
+  --crl-primary-light: hsl(212, 45%, 89%);
+  --crl-primary-dark: hsl(216, 15%, 48%);
+  --crl-secondary: hsl(218, 44%, 22%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem =10px */
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--crl-primary-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.qr__code {
+  width: clamp(25rem, 90%, 30rem);
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+  /* margin: 2rem 0; */
+}
+.qr__code-img {
+  /* width: clamp(20rem, 90vw, 36rem); */
+  max-width: 90%;
+  margin: 1rem auto;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.qr__code-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+section {
+  margin: clamp(1rem, 2vw, 2rem) 0;
+}
+
+.heading-primary {
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem);
+  font-weight: 700;
+  color: var(--crl-secondary);
+}
+
+section p {
+  padding: 1rem 0;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: var(--crl-primary-dark);
+  font-weight: 400;
+}
+
+span {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--crl-primary-light);
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--crl-primary-light);
+  font-style: italic;
+}
+
+.attribution a,
+.attribution {
+  padding: 1rem 0;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--crl-secondary);
+  font-weight: 400;
+}
